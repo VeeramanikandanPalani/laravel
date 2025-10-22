@@ -1,0 +1,19 @@
+User::all();
+
+User::create([
+'name'=>'veera',
+'age'=>16
+])
+
+User::select('name','age')->get();
+
+User::where('email','test@gmail.com')->get();
+
+$User = new User();
+$User->email = 'test@gmail.com'
+$User->save();
+
+
+$User = User::find(1);
+$User->email = 'test1@gmail.com'
+$User->save();
