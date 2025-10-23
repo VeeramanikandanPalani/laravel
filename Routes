@@ -1,3 +1,13 @@
 Route::get('/',function(){
   return view('Home.Dashboard');
 });
+
+Route::post('/Register',[RegisterController::class,'register']);
+
+Route::post('/Orders',[OrderController::class,'makeOrder'])->name('makeNew');
+
+Route::group(function(){
+  Route::get('/Users',[UserController:class,'index']);
+});
+
+Route::get('/Users',[UserController::class,'index'])->middleware('auth');
