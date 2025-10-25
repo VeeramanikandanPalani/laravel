@@ -1,0 +1,17 @@
+Step 1:
+npm install bootstrap@4.6.2 jquery popper.js
+
+Step 2:
+Open your file:
+resources/js/app.js
+
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+npm run dev
+
+npm run build
+
+Add to your base blasde layout
+
+@vite(['resources/js/app.js'])
